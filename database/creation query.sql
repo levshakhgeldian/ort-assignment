@@ -1,0 +1,22 @@
+IF EXISTS (SELECT * FROM sys.databases WHERE name = 'OrtDB')
+BEGIN
+  USE master;
+  DROP DATABASE OrtDB;
+END;
+GO
+
+CREATE DATABASE OrtDB;
+GO
+
+USE OrtDB;
+GO
+
+CREATE TABLE Clients(
+	ID CHAR(9),
+	FirstName VARCHAR(20),
+	LastName VARCHAR(20),
+	IP VARCHAR(15),
+	Phone VARCHAR(20),
+	
+	PRIMARY KEY(ID)
+);
